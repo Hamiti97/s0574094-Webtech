@@ -12,10 +12,4 @@ public class FilmfinderApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FilmfinderApplication.class, args);
 	}
-
-
-	@GetMapping
-	public String hello() {
-		return "Hello World";
-	}
 }

@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    username: ${DATASOURCE_USERNAME} #fvluovlirncdkz
+    password: ${DATASOURCE_PASSWORD} #d5017cbf749b544aaf795fd9c8a7b723485e0c93f9f3e5ad7550ef8af34e7bf1
+    url: ${DATASOURCE_URL} #jdbc:postgresql://ec2-34-250-19-18.eu-west-1.compute.amazonaws.com:5432/da4o2qnrvhoje0
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        # The SQL dialect makes Hibernate generate better Sql for the chosen database
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        time_zone: UTC
+    show-sql: false # Set true for debugging
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update # (create, create-drop, validate, update)
+    open-in-view: false

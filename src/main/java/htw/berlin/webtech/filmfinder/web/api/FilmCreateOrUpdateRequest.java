@@ -1,11 +1,11 @@
-package htw.berlin.webtech.filmfinder.api;
+package htw.berlin.webtech.filmfinder.web.api;
 
-public class FilmCreateRequest {
+public class FilmCreateOrUpdateRequest {
     private String titel;
     private String genre;
     private long erscheinungsjahr;
 
-    public FilmCreateRequest(String titel, String genre, long erscheinungsjahr) {
+    public FilmCreateOrUpdateRequest(String titel, String genre, long erscheinungsjahr) {
         this.titel = titel;
         this.genre = genre;
         this.erscheinungsjahr = erscheinungsjahr;

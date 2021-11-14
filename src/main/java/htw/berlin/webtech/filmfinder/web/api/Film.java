@@ -1,4 +1,4 @@
-package htw.berlin.webtech.filmfinder.api;
+package htw.berlin.webtech.filmfinder.web.api;
 
 public class Film {
     private long id;

@@ -10,6 +10,7 @@ public class FilmCreateOrUpdateRequest {
         this.genre = genre;
         this.erscheinungsjahr = erscheinungsjahr;
     }
+    public FilmCreateOrUpdateRequest() {}
 
     public String getTitel() {
         return titel;

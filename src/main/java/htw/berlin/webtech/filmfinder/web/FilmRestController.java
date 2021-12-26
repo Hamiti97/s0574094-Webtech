@@ -27,7 +27,6 @@ public class FilmRestController {
         var film = filmService.findById(id);
         return film != null? ResponseEntity.ok(film) : ResponseEntity.notFound().build();
     }
-
     @PostMapping(path = "/api/v1/filme")
     public ResponseEntity<Void> createFilm(@RequestBody FilmCreateOrUpdateRequest request) throws URISyntaxException {
         var film = filmService.create(request);
@@ -44,7 +43,4 @@ public class FilmRestController {
         boolean successful = filmService.deleteById(id);
         return successful? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
-
-
-
 }

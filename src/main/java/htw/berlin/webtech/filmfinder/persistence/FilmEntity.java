@@ -20,10 +20,14 @@ public class FilmEntity {
     @Column(name ="erscheinungsjahr")
     private long erscheinungsjahr;
 
-    public FilmEntity(String titel, String genre, long erscheinungsjahr) {
+    @Column(name ="imageUrl")
+    private String imageUrl;
+
+    public FilmEntity(String titel, String genre, long erscheinungsjahr, String imageUrl) {
         this.titel = titel;
         this.genre = genre;
         this.erscheinungsjahr = erscheinungsjahr;
+        this.imageUrl = imageUrl;
     }
 
     protected FilmEntity() {
@@ -55,5 +59,13 @@ public class FilmEntity {
 
     public void setErscheinungsjahr(Long erscheinungsjahr) {
         this.erscheinungsjahr = erscheinungsjahr;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

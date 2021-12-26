@@ -26,11 +26,10 @@ public class FilmService {
     public Film findById(Long id) {
         var filmEntity = filmRepository.findById(id);
         return filmEntity.map(this::transformEntity).orElse(null);
-
     }
 
     public Film create(FilmCreateOrUpdateRequest request) {
-        var filmEntity = new FilmEntity(request.getTitel(), request.getGenre(), request.getErscheinungsjahr());
+        var filmEntity = new FilmEntity(request.getTitel(), request.getGenre(), request.getErscheinungsjahr(), request.getImageUrl());
         filmEntity = filmRepository.save(filmEntity);
         return transformEntity(filmEntity);
     }
@@ -44,6 +43,7 @@ public class FilmService {
         filmEntity.setTitel(request.getTitel());
         filmEntity.setGenre(request.getGenre());
         filmEntity.setErscheinungsjahr(request.getErscheinungsjahr());
+        filmEntity.setImageUrl(request.getImageUrl());
         filmEntity = filmRepository.save(filmEntity);
 
         return transformEntity(filmEntity);
@@ -62,7 +62,8 @@ public class FilmService {
                 filmEntity.getId(),
                 filmEntity.getGenre(),
                 filmEntity.getTitel(),
-                filmEntity.getErscheinungsjahr()
+                filmEntity.getErscheinungsjahr(),
+                filmEntity.getImageUrl()
         );
     }
 }

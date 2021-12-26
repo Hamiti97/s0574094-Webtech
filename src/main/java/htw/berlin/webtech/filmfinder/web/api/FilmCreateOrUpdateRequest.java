@@ -4,11 +4,13 @@ public class FilmCreateOrUpdateRequest {
     private String titel;
     private String genre;
     private long erscheinungsjahr;
+    private String imageUrl;
 
-    public FilmCreateOrUpdateRequest(String titel, String genre, long erscheinungsjahr) {
+    public FilmCreateOrUpdateRequest(String titel, String genre, long erscheinungsjahr, String imageUrl) {
         this.titel = titel;
         this.genre = genre;
         this.erscheinungsjahr = erscheinungsjahr;
+        this.imageUrl = imageUrl;
     }
     public FilmCreateOrUpdateRequest() {}
 
@@ -35,4 +37,8 @@ public class FilmCreateOrUpdateRequest {
     public void setErscheinungsjahr(long erscheinungsjahr) {
         this.erscheinungsjahr = erscheinungsjahr;
     }
+
+    public String getImageUrl() { return imageUrl; }
+
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 }

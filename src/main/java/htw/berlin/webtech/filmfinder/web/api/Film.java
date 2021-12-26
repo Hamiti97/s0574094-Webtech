@@ -5,12 +5,14 @@ public class Film {
     private String titel;
     private String genre;
     private long erscheinungsjahr;
+    private String imageUrl;
 
-    public Film(long id, String titel, String genre, long erscheinungsjahr) {
+    public Film(long id, String titel, String genre, long erscheinungsjahr, String imageUrl) {
         this.id = id;
         this.titel = titel;
         this.genre = genre;
         this.erscheinungsjahr = erscheinungsjahr;
+        this.imageUrl = imageUrl;
     }
 
     public long getId() {
@@ -44,4 +46,8 @@ public class Film {
     public void setErscheinungsjahr(long erscheinungsjahr) {
         this.erscheinungsjahr = erscheinungsjahr;
     }
+
+    public String getImageUrl() { return imageUrl; }
+
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 }

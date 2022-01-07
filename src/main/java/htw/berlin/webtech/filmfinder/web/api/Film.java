@@ -6,13 +6,15 @@ public class Film {
     private String genre;
     private long erscheinungsjahr;
     private String imageUrl;
+    private String ytLink;
 
-    public Film(long id, String titel, String genre, long erscheinungsjahr, String imageUrl) {
+    public Film(long id, String titel, String genre, long erscheinungsjahr, String imageUrl, String ytLink) {
         this.id = id;
         this.titel = titel;
         this.genre = genre;
         this.erscheinungsjahr = erscheinungsjahr;
         this.imageUrl = imageUrl;
+        this.ytLink = ytLink;
     }
 
     public long getId() {
@@ -50,4 +52,8 @@ public class Film {
     public String getImageUrl() { return imageUrl; }
 
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+
+    public String getYtLink() { return ytLink; }
+
+    public void setYtLink(String ytLink) { this.ytLink = ytLink; }
 }

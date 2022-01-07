@@ -29,7 +29,7 @@ public class FilmService {
     }
 
     public Film create(FilmCreateOrUpdateRequest request) {
-        var filmEntity = new FilmEntity(request.getTitel(), request.getGenre(), request.getErscheinungsjahr(), request.getImageUrl());
+        var filmEntity = new FilmEntity(request.getTitel(), request.getGenre(), request.getErscheinungsjahr(), request.getImageUrl(), request.getYtLink());
         filmEntity = filmRepository.save(filmEntity);
         return transformEntity(filmEntity);
     }
@@ -44,6 +44,7 @@ public class FilmService {
         filmEntity.setGenre(request.getGenre());
         filmEntity.setErscheinungsjahr(request.getErscheinungsjahr());
         filmEntity.setImageUrl(request.getImageUrl());
+        filmEntity.setYtLink(request.getYtLink());
         filmEntity = filmRepository.save(filmEntity);
 
         return transformEntity(filmEntity);
@@ -63,7 +64,8 @@ public class FilmService {
                 filmEntity.getGenre(),
                 filmEntity.getTitel(),
                 filmEntity.getErscheinungsjahr(),
-                filmEntity.getImageUrl()
+                filmEntity.getImageUrl(),
+                filmEntity.getYtLink()
         );
     }
 }

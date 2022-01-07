@@ -23,11 +23,15 @@ public class FilmEntity {
     @Column(name ="imageUrl")
     private String imageUrl;
 
-    public FilmEntity(String titel, String genre, long erscheinungsjahr, String imageUrl) {
+    @Column(name ="ytLink")
+    private String ytLink;
+
+    public FilmEntity(String titel, String genre, long erscheinungsjahr, String imageUrl, String ytLink) {
         this.titel = titel;
         this.genre = genre;
         this.erscheinungsjahr = erscheinungsjahr;
         this.imageUrl = imageUrl;
+        this.ytLink = ytLink;
     }
 
     protected FilmEntity() {
@@ -68,4 +72,8 @@ public class FilmEntity {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
+    public String getYtLink() { return ytLink; }
+
+    public void setYtLink(String ytLink) { this.ytLink = ytLink; }
 }
